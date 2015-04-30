@@ -1,0 +1,6 @@
+enum material{
+  steel(),
+  iron(),
+  reinforced_steel(),
+  reinforced_iron();
+}
