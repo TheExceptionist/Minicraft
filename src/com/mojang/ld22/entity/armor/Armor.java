@@ -3,7 +3,7 @@ import com.mojang.ld22.item.Material;
 class Armor{
   private Material Type;
   
-  public int getArmorValue(Material armor){
+  public static int getArmorValue(Material armor){
     if(armor == Material.steel){
       return 10; 
     }
