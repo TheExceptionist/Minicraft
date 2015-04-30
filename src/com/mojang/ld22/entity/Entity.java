@@ -7,6 +7,7 @@ import com.mojang.ld22.gfx.Screen;
 import com.mojang.ld22.item.Item;
 import com.mojang.ld22.level.Level;
 import com.mojang.ld22.level.tile.Tile;
+import com.mojang.ld22.item.Material;
 
 public class Entity {
 	protected final Random random = new Random();
@@ -15,6 +16,7 @@ public class Entity {
 	public int yr = 6;
 	public boolean removed;
 	public Level level;
+	private Material Type;
 
 	public void render(Screen screen) {
 	}
