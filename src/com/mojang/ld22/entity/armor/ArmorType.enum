@@ -1,0 +1,6 @@
+enum ArmorType{
+  iron(),
+  reinforced_iron(),
+  reinforced_steel(),
+  steel();
+}
