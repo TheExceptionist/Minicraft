@@ -1,5 +1,6 @@
 class Armor{
-  private int Type;
+  private ArmorType Type;
+  
   public Armor(){
     
   }
