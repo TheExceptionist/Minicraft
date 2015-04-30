@@ -1,1 +1,5 @@
-
+class Knight{
+  public Knight(){
+    
+  }
+}
