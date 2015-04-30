@@ -94,10 +94,9 @@ public class Mob extends Entity {
 		health += heal;
 		if (health > maxHealth) health = maxHealth;
 	}
-
+	
 	protected void doHurt(int damage, int attackDir) {
 		if (hurtTime > 0) return;
-
 		if (level.player != null) {
 			int xd = level.player.x - x;
 			int yd = level.player.y - y;
