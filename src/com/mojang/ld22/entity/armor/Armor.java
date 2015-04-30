@@ -1,21 +1,24 @@
 import com.mojang.ld22.item.Material;
 
 class Armor{
-  private material Type;
+  private Material Type;
   
   public Armor(){
     
   }
   
-  public int getArmorValue(material armor){
-    if(armor == ArmorType.steel){
+  public int getArmorValue(Material armor){
+    if(armor == Material.steel){
       return 10; 
     }
-        if(armor == ArmorType.steel){
-      return 10; 
+    if(armor == Material.reinforced_steel){
+      return 20; 
     }
-        if(armor == ArmorType.steel){
-      return 10; 
+    if(armor == Material.reinforced_iron){
+      return 15; 
+    }    
+    if(armor == Material.iron){
+      return 5; 
     }
   }
 }
