@@ -1,4 +1,4 @@
-enum material{
+enum Material{
   steel(),
   iron(),
   reinforced_steel(),
