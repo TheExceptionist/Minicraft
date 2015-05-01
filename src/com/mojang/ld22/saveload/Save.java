@@ -35,12 +35,12 @@ public class Save {
 		this.player = player;
 		File folder = new File(location);
 		folder.mkdirs();
-		data.add(player.x  "");
-		data.add(player.y  "");
-		data.add(player.health  "");
-		data.add(player.score  "");
+		data.add(player.x + "");
+		data.add(player.y + "");
+		data.add(player.health + "");
+		data.add(player.score + "");
 		//data.add(seed  "");
-		data.add(Game.currentLevel  "");
+		data.add(Game.currentLevel + "");
 		
 		writeWorld();
 		writeInventory();
@@ -49,20 +49,20 @@ public class Save {
 	}
 	private void writeInventory(){
 		inventory.clear();
-		for(int i = 0;i < Inventory.items1.size();i){
+		for(int i = 0;i < Inventory.items1.size();i++){
 			if (Inventory.items1.get(i) instanceof ResourceItem){
-				if(!inventory.contains(Inventory.items1.get(i).getName()  ":"  Inventory.count1((Inventory.items1.get(i))))){
-					inventory.add(Inventory.items1.get(i).getName()  ":"  Inventory.count1((Inventory.items1.get(i))));
+				if(!inventory.contains(Inventory.items1.get(i).getName() + ":" + Inventory.count1((Inventory.items1.get(i))))){
+					inventory.add(Inventory.items1.get(i).getName() + ":" + Inventory.count1((Inventory.items1.get(i))));
 				}else{
-					System.out.println("Item duplicate: "  Inventory.items1.get(i).getName()  " Fixed!");
+					System.out.println("Item duplicate: " + Inventory.items1.get(i).getName() + " Fixed!");
 				}
 			}else{
-				inventory.add(Inventory.items1.get(i).getName()  ":"  "1");
+				inventory.add(Inventory.items1.get(i).getName() + ":" + "1");
 			}
 		}
 	}
 	private void writeToFile(String world) {
-		File file = new File(location  world  extention);
+		File file = new File(location + world + extention);
 		try {
 			file.createNewFile();
 			BufferedWriter br = new BufferedWriter(new FileWriter(file));
@@ -89,15 +89,15 @@ public class Save {
 	}
 	
 	public void writeWorld(){
-        for(int l = 0; l < Game.levels.length; l)
+        for(int l = 0; l < Game.levels.length; l++)
         {
         	if(l == 0){
         		worlddata0.add((new StringBuilder(String.valueOf(Game.levels[l].w))).toString());
             	worlddata0.add((new StringBuilder(String.valueOf(Game.levels[l].h))).toString());
             	worlddata0.add((new StringBuilder(String.valueOf(Game.levels[l].depth))).toString());
-                for(int i = 0; i < Game.levels[l].w; i)
+                for(int i = 0; i < Game.levels[l].w; i++)
                 {
-                    for(int ii = 0; ii < Game.levels[l].h; ii)
+                    for(int ii = 0; ii < Game.levels[l].h; ii++)
                         worlddata0.add((new StringBuilder(String.valueOf(Game.levels[l].getTile(i, ii).id))).toString());
 
                 }
@@ -117,9 +117,9 @@ public class Save {
         		worlddata2.add((new StringBuilder(String.valueOf(Game.levels[l].w))).toString());
             	worlddata2.add((new StringBuilder(String.valueOf(Game.levels[l].h))).toString());
             	worlddata2.add((new StringBuilder(String.valueOf(Game.levels[l].depth))).toString());
-                for(int i = 0; i < Game.levels[l].w; i)
+                for(int i = 0; i < Game.levels[l].w; i++)
                 {
-                    for(int ii = 0; ii < Game.levels[l].h; ii)
+                    for(int ii = 0; ii < Game.levels[l].h; ii++)
                         worlddata2.add((new StringBuilder(String.valueOf(Game.levels[l].getTile(i, ii).id))).toString());
 
                 }
@@ -130,7 +130,7 @@ public class Save {
             	worlddata3.add((new StringBuilder(String.valueOf(Game.levels[l].depth))).toString());
                 for(int i = 0; i < Game.levels[l].w; i)
                 {
-                    for(int ii = 0; ii < Game.levels[l].h; ii)
+                    for(int ii = 0; ii < Game.levels[l].h; ii++)
                         worlddata3.add((new StringBuilder(String.valueOf(Game.levels[l].getTile(i, ii).id))).toString());
 
                 }
@@ -139,37 +139,37 @@ public class Save {
         		worlddata4.add((new StringBuilder(String.valueOf(Game.levels[l].w))).toString());
             	worlddata4.add((new StringBuilder(String.valueOf(Game.levels[l].h))).toString());
             	worlddata4.add((new StringBuilder(String.valueOf(Game.levels[l].depth))).toString());
-                for(int i = 0; i < Game.levels[l].w; i)
+                for(int i = 0; i < Game.levels[l].w; i++)
                 {
-                    for(int ii = 0; ii < Game.levels[l].h; ii)
+                    for(int ii = 0; ii < Game.levels[l].h; ii++)
                         worlddata4.add((new StringBuilder(String.valueOf(Game.levels[l].getTile(i, ii).id))).toString());
 
                 }
         	}
         }
 
-        for(int l = 0; l < Game.levels.length; l)
+        for(int l = 0; l < Game.levels.length; l++)
         {
-            for(int i = 0; i < Game.levels[l].w; i)
+            for(int i = 0; i < Game.levels[l].w; i++)
             {
             	if (l == 0){
-                    for(int ii = 0; ii < Game.levels[l].h; ii)
+                    for(int ii = 0; ii < Game.levels[l].h; ii++)
                         worlddata0.add((new StringBuilder(String.valueOf(Game.levels[l].getData(i, ii)))).toString());
             	}
             	if (l == 1){
-                    for(int ii = 0; ii < Game.levels[l].h; ii)
+                    for(int ii = 0; ii < Game.levels[l].h; ii++)
                         worlddata1.add((new StringBuilder(String.valueOf(Game.levels[l].getData(i, ii)))).toString());
             	}
             	if (l == 2){
-                    for(int ii = 0; ii < Game.levels[l].h; ii)
+                    for(int ii = 0; ii < Game.levels[l].h; ii++)
                         worlddata2.add((new StringBuilder(String.valueOf(Game.levels[l].getData(i, ii)))).toString());
             	}
             	if (l == 3){
-                    for(int ii = 0; ii < Game.levels[l].h; ii)
+                    for(int ii = 0; ii < Game.levels[l].h; ii++)
                         worlddata3.add((new StringBuilder(String.valueOf(Game.levels[l].getData(i, ii)))).toString());
             	}
             	if (l == 4){
-                    for(int ii = 0; ii < Game.levels[l].h; ii)
+                    for(int ii = 0; ii < Game.levels[l].h; ii++)
                         worlddata4.add((new StringBuilder(String.valueOf(Game.levels[l].getData(i, ii)))).toString());
             	}
 
@@ -178,8 +178,8 @@ public class Save {
     }
 	
 	public void writeEntities(){
-        for(int l = 0; l < Game.levels.length; l){
-            for(int i = 0; i < Game.levels[l].entities.size(); i){
+        for(int l = 0; l < Game.levels.length; l++){
+            for(int i = 0; i < Game.levels[l].entities.size(); i++){
                 Entity e = (Entity)Game.levels[l].entities.get(i);
                 String name = e.getClass().getName().replace("com.mojang.ld22.entity.", "");
                 String extradata = "";
@@ -194,7 +194,7 @@ public class Save {
                 if(e instanceof Chest){
                     String chestinv = "";
                     Chest c = (Chest)e;
-                    for(int ii = 0; ii < c.inventory.items.size(); ii)
+                    for(int ii = 0; ii < c.inventory.items.size(); ii++)
                         if(c.inventory.items.get(ii) instanceof ResourceItem)
                             chestinv = (new StringBuilder(String.valueOf(chestinv))).append(((Item)c.inventory.items.get(ii)).getName()).append(";").append(c.inventory.count((Item)c.inventory.items.get(ii))).append(":").toString();
                         else
