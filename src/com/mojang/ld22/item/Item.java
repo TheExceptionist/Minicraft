@@ -6,6 +6,7 @@ import com.mojang.ld22.entity.Player;
 import com.mojang.ld22.gfx.Screen;
 import com.mojang.ld22.level.Level;
 import com.mojang.ld22.level.tile.Tile;
+import com.mojang.ld22.saveload.DATA;
 import com.mojang.ld22.screen.ListItem;
 
 public class Item implements ListItem {
@@ -16,6 +17,24 @@ public class Item implements ListItem {
 	public int getSprite() {
 		return 0;
 	}
+	
+	public Item addItem()
+    	{
+	        DATA.items.add(this);
+        	return this;
+    	}
+    	
+    	public static Item getItem(String name)
+    	{
+        Item newItem = DATA.cloth;
+        for(int i = 0; i < DATA.items.size(); i++){
+            if(((Item)DATA.items.get(i)).getName().replaceAll(" ", "").equalsIgnoreCase(name.replaceAll(" ", ""))){
+                newItem = (Item)DATA.items.get(i);
+            }
+        }
+
+        return newItem;
+    	}
 
 	public void onTake(ItemEntity itemEntity) {
 	}
