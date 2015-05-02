@@ -28,7 +28,15 @@ public class Mob extends Entity {
 		if (level.getTile(x >> 4, y >> 4) == Tile.lava) {
 			hurt(this, 4, dir ^ 1);
 		}
-
+		
+		if(health < maxHealth){
+			healthRate++;
+			if(healthRate == 200){
+				health += healthReg;
+				healthRate = 0;
+			}
+		}
+		
 		if (health <= 0) {
 			die();
 		}
