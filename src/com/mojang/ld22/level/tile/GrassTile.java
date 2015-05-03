@@ -22,9 +22,13 @@ public class GrassTile extends Tile {
 		int col = Color.get(level.grassColor, level.grassColor, level.grassColor + 111, level.grassColor + 111);
 		int transitionColor = Color.get(level.grassColor - 111, level.grassColor, level.grassColor + 111, level.dirtColor);
 
+		//checks if tile above is connected to grass
 		boolean u = !level.getTile(x, y - 1).connectsToGrass;
+		//checks if tile below is connected to grass
 		boolean d = !level.getTile(x, y + 1).connectsToGrass;
+		//checks if tile left is connected to grass
 		boolean l = !level.getTile(x - 1, y).connectsToGrass;
+		//checks if tile right is connected to grass
 		boolean r = !level.getTile(x + 1, y).connectsToGrass;
 
 		if (!u && !l) {
