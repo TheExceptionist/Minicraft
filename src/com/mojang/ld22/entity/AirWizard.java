@@ -94,6 +94,8 @@ public class AirWizard extends Mob {
 	}
 
 	public void render(Screen screen) {
+		//yt spritesheet row
+		//xt spritesheet column
 		int xt = 8;
 		int yt = 14;
 
