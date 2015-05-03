@@ -67,6 +67,7 @@ public class Screen {
 
 				int xs = x;
 				if (mirrorX) xs = 7 - x;
+				//Decoding right here
 				int col = (colors >> (sheet.pixels[xs + ys * sheet.width + toffs] * 8)) & 255;
 				if (col < 255) pixels[(x + xp) + (y + yp) * w] = col;
 			}
