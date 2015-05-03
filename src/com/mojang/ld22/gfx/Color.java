@@ -1,7 +1,7 @@
 package com.mojang.ld22.gfx;
 
 public class Color {
-
+	//Notch made up his custom coloring system, a little confusing at first.
 	public static int get(int a, int b, int c, int d) {
 		return (get(d) << 24) + (get(c) << 16) + (get(b) << 8) + (get(a));
 	}
